@@ -61,7 +61,7 @@ function Tabela() {
     return (
         <div style={{ padding: '20px' }}>
             <Typography variant="h4">
-                Posts
+                Camisas
             </Typography>
             <Alerta alerta={alerta} />
             <Button variant="outlined"

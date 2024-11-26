@@ -1,5 +1,4 @@
 import TextField from '@mui/material/TextField';
-import Box from '@mui/material/Box';
 
 function CampoEntrada({ id, label, tipo, name, value, onchange, requerido
     , readonly, maxlength, msgvalido, msginvalido, placeholder }) {

@@ -46,6 +46,7 @@ const signInWithGitHub = async () => {
 const logout = () => {
     signOut(auth);
 };
+
 export {
     auth,
     db,

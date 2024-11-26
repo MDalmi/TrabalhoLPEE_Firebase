@@ -29,12 +29,19 @@ function Form() {
                     readonly={false} maxlength={50}
                     msgvalido="Titulo OK"
                     msginvalido="Informe o time" />
-                 <CampoEntrada id="txtValor" label="Valor"
+                <CampoEntrada id="txtValor" label="Valor"
                     tipo="number" name="valor" value={objeto.valor}
                     onchange={handleChange} requerido={true}
                     readonly={false} maxlength={50}
                     msgvalido="Valor OK"
                     msginvalido="Informe o valor" />
+                <CampoEntrada id="txtAno" label="Ano"
+                    tipo="text" name="ano"
+                    value={objeto.ano}
+                    onchange={handleChange} requerido={true}
+                    readonly={false} maxlength={100}
+                    msgvalido="Ano ok"
+                    msginvalido="Informe o Ano" />
                 <CampoEntrada id="txtUrl" label="URL"
                     tipo="text" name="url"
                     value={objeto.url}
@@ -48,9 +55,9 @@ function Form() {
                     tipo="text" name="tipo" value={objeto.tipo}
                     onchange={handleChange} requerido={false}
                     msgvalido="Tipo OK"
-                    msginvalido="Informe o Tipo">                    
+                    msginvalido="Informe o Tipo">
                     <MenuItem value='nova'>Nova</MenuItem>
-                    <MenuItem value='usada'>Usada</MenuItem>                    
+                    <MenuItem value='usada'>Usada</MenuItem>
                 </CampoSelect>
             </Dialogo>
         </>
