@@ -1,0 +1,68 @@
+[debug] [2024-11-26T03:01:46.814Z] ----------------------------------------------------------------------
+[debug] [2024-11-26T03:01:46.817Z] Command:       /usr/bin/node /usr/local/bin/firebase deploy
+[debug] [2024-11-26T03:01:46.818Z] CLI Version:   13.27.0
+[debug] [2024-11-26T03:01:46.818Z] Platform:      linux
+[debug] [2024-11-26T03:01:46.818Z] Node Version:  v18.19.1
+[debug] [2024-11-26T03:01:46.818Z] Time:          Tue Nov 26 2024 00:01:46 GMT-0300 (Hora padrão de Brasília)
+[debug] [2024-11-26T03:01:46.819Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-11-26T03:01:46.909Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-11-26T03:01:46.909Z] > authorizing via signed-in user (dalminas123@gmail.com)
+[debug] [2024-11-26T03:01:46.909Z] [iam] checking project trabalholpee for permissions ["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2024-11-26T03:01:46.911Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:46.912Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:46.913Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/trabalholpee:testIamPermissions [none]
+[debug] [2024-11-26T03:01:46.914Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/trabalholpee:testIamPermissions x-goog-quota-user=projects/trabalholpee
+[debug] [2024-11-26T03:01:46.914Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trabalholpee:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-26T03:01:47.990Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/trabalholpee:testIamPermissions 200
+[debug] [2024-11-26T03:01:47.991Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/trabalholpee:testIamPermissions {"permissions":["datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2024-11-26T03:01:47.993Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:47.994Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:47.996Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/trabalholpee [none]
+[debug] [2024-11-26T03:01:48.600Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/trabalholpee 200
+[debug] [2024-11-26T03:01:48.601Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/trabalholpee {"projectId":"trabalholpee","projectNumber":"569326381920","displayName":"TrabalhoLPEE","name":"projects/trabalholpee","resources":{"hostingSite":"trabalholpee"},"state":"ACTIVE","etag":"1_4ca2782b-1757-4307-9ec8-91d03840d2c8"}
+[info] 
+[info] === Deploying to 'trabalholpee'...
+[info] 
+[info] i  deploying firestore, hosting 
+[info] i  firestore: reading indexes from firestore.indexes.json... 
+[info] i  cloud.firestore: checking firestore.rules for compilation errors... 
+[debug] [2024-11-26T03:01:48.624Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:48.625Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:48.626Z] >>> [apiv2][query] POST https://firebaserules.googleapis.com/v1/projects/trabalholpee:test [none]
+[debug] [2024-11-26T03:01:48.626Z] >>> [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/trabalholpee:test [omitted]
+[debug] [2024-11-26T03:01:49.736Z] <<< [apiv2][status] POST https://firebaserules.googleapis.com/v1/projects/trabalholpee:test 200
+[debug] [2024-11-26T03:01:49.736Z] <<< [apiv2][body] POST https://firebaserules.googleapis.com/v1/projects/trabalholpee:test {}
+[info] ✔  cloud.firestore: rules file firestore.rules compiled successfully 
+[debug] [2024-11-26T03:01:49.741Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:49.741Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:49.741Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/trabalholpee/versions [none]
+[debug] [2024-11-26T03:01:49.741Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/trabalholpee/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-11-26T03:01:51.159Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/trabalholpee/versions 200
+[debug] [2024-11-26T03:01:51.159Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/trabalholpee/versions {"name":"projects/569326381920/sites/trabalholpee/versions/cb660ce56cbbd1fc","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2024-11-26T03:01:51.167Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:51.168Z] Checked if tokens are valid: true, expires at: 1732592487908
+[info] i  firestore: deploying indexes... 
+[debug] [2024-11-26T03:01:51.175Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:51.176Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:51.181Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/releases pageSize=10&pageToken=
+[debug] [2024-11-26T03:01:51.192Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/indexes [none]
+[debug] [2024-11-26T03:01:52.233Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/releases 200
+[debug] [2024-11-26T03:01:52.234Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/releases {"releases":[{"name":"projects/trabalholpee/releases/cloud.firestore","rulesetName":"projects/trabalholpee/rulesets/752d3124-74c9-47b7-951f-a40cd8312413","createTime":"2024-11-19T12:48:31.603718Z","updateTime":"2024-11-26T02:41:38.029291Z"}]}
+[debug] [2024-11-26T03:01:52.236Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:52.237Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:52.238Z] >>> [apiv2][query] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/rulesets/752d3124-74c9-47b7-951f-a40cd8312413 [none]
+[debug] [2024-11-26T03:01:52.310Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/indexes 200
+[debug] [2024-11-26T03:01:52.310Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/indexes {}
+[debug] [2024-11-26T03:01:52.312Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:52.312Z] Checked if tokens are valid: true, expires at: 1732592487908
+[debug] [2024-11-26T03:01:52.313Z] >>> [apiv2][query] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* [none]
+[debug] [2024-11-26T03:01:53.264Z] <<< [apiv2][status] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/rulesets/752d3124-74c9-47b7-951f-a40cd8312413 200
+[debug] [2024-11-26T03:01:53.265Z] <<< [apiv2][body] GET https://firebaserules.googleapis.com/v1/projects/trabalholpee/rulesets/752d3124-74c9-47b7-951f-a40cd8312413 [omitted]
+[info] i  firestore: latest version of firestore.rules already up to date, skipping upload... 
+[debug] [2024-11-26T03:01:53.306Z] <<< [apiv2][status] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* 200
+[debug] [2024-11-26T03:01:53.307Z] <<< [apiv2][body] GET https://firestore.googleapis.com/v1/projects/trabalholpee/databases/(default)/collectionGroups/-/fields?filter=indexConfig.usesAncestorConfig=false OR ttlConfig:* {"fields":[{"name":"projects/trabalholpee/databases/(default)/collectionGroups/__default__/fields/*","indexConfig":{"indexes":[{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"ASCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","order":"DESCENDING"}],"state":"READY"},{"queryScope":"COLLECTION","fields":[{"fieldPath":"*","arrayConfig":"CONTAINS"}],"state":"READY"}]}}]}
+[info] ✔  firestore: deployed indexes in firestore.indexes.json successfully for (default) database 
+[info] i  hosting[trabalholpee]: beginning deploy... 
+[info] i  hosting[trabalholpee]: found 73 files in build 
+[debug] [2024-11-26T03:01:53.349Z] [hosting] uploading with 200 concurrency
